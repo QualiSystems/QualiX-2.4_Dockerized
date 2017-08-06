@@ -1,4 +1,4 @@
-# QualiX v3.0
+# QualiX v2.4 For Docker - v3.0
 This repository contains the scripts and files to run dockerized QualiX with Docker Swarm. 
 
 # Requirements
