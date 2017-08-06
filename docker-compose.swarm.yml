@@ -1,0 +1,31 @@
+version: "3.0"
+
+services:
+  qxserver:
+    image: guacamole/guacd:0.9.10-incubating
+    networks:
+      - qxnetwork
+    deploy:
+      restart_policy:
+        condition: on-failure
+
+  qxplugin:
+    image: quali/qualix:latest
+    environment:
+      - GUACAMOLE_HOME=/opt/guacamole/.guacamole
+      - GUACD_HOSTNAME=qxserver
+      - GUACD_PORT=4822
+    ports:
+      - 80:8080
+      - 443:8443
+    networks:
+      - qxnetwork
+    depends_on:
+      - qxserver
+    deploy:
+      restart_policy:
+        condition: on-failure
+
+networks:
+  qxnetwork:
+
