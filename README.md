@@ -4,7 +4,8 @@ This repository contains the scripts and files to run dockerized QualiX with Doc
 # Requirements
 * Docker CE or EE 17.03.0 or greater.
 
-# How-To (Make sure you have execute permissions to the .sh files)
+# How-To 
+### Make sure you have execute permissions to the .sh files
 
 ### Deploy the QualiX stack 
     bin/docker_stack_deploy.sh 
